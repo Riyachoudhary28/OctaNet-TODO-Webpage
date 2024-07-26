@@ -1,0 +1,107 @@
+/* styles.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%); /* Grey gradient background */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent grey background */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    flex: 1;
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for readability */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#task-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745; /* Green button */
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#task-input button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff; /* Blue color for buttons */
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.task-item button:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent grey background */
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #task-input {
+        flex-direction: column;
+    }
+
+    #task-input button {
+        margin-top: 10px;
+    }
+}
